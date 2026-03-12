@@ -1,8 +1,21 @@
-export default function App() {
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
+import Onboarding from './pages/Onboarding';
+import IdentityIntegration from './pages/IdentityIntegration';
+import MasterDataLinkage from './pages/MasterDataLinkage';
+
+function App() {
   return (
-    <div style={{ fontFamily: 'system-ui', padding: '2rem', maxWidth: 800, margin: '0 auto' }}>
-      <h1>Supplier Collaboration App & Agents integrated with SAP S/4HANA OTC</h1>
-      <p>Project scaffold ready. Start building!</p>
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/onboarding" element={<Onboarding />} />
+        <Route path="/identity-integration" element={<IdentityIntegration />} />
+        <Route path="/master-data-linkage" element={<MasterDataLinkage />} />
+      </Routes>
     </div>
   );
 }
+
+export default App;
