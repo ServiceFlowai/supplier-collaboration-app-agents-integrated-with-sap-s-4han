@@ -1,18 +1,18 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
-import Onboarding from './pages/Onboarding';
-import IdentityIntegration from './pages/IdentityIntegration';
-import MasterDataLinkage from './pages/MasterDataLinkage';
+import OrderQA from './pages/OrderQA';
+import DeliveryStatus from './pages/DeliveryStatus';
+import ASNManagement from './pages/ASNManagement';
 
 function App() {
   return (
-    <div className="app">
+    <div className="min-h-screen bg-gray-100">
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/onboarding" element={<Onboarding />} />
-        <Route path="/identity-integration" element={<IdentityIntegration />} />
-        <Route path="/master-data-linkage" element={<MasterDataLinkage />} />
+        <Route path="/order-qa" element={<OrderQA />} />
+        <Route path="/delivery-status" element={<DeliveryStatus />} />
+        <Route path="/asn-management" element={<ASNManagement />} />
       </Routes>
     </div>
   );
