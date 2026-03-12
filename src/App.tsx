@@ -1,19 +1,23 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Dashboard from './pages/Dashboard';
-import CaseTriage from './pages/CaseTriage';
-import SettlementUpdates from './pages/SettlementUpdates';
+import Sidebar from './components/Sidebar';
+import OrderAcknowledgement from './pages/OrderAcknowledgement';
+import ChangeRequest from './pages/ChangeRequest';
+import ExceptionResolution from './pages/ExceptionResolution';
 
-function App() {
+const App = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/case-triage" element={<CaseTriage />} />
-        <Route path="/settlement-updates" element={<SettlementUpdates />} />
-      </Routes>
+    <div className="flex">
+      <Sidebar />
+      <div className="flex-1 p-4">
+        <Routes>
+          <Route path="/order-acknowledgement" element={<OrderAcknowledgement />} />
+          <Route path="/change-request" element={<ChangeRequest />} />
+          <Route path="/exception-resolution" element={<ExceptionResolution />} />
+        </Routes>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
