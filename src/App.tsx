@@ -1,16 +1,14 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Dashboard from './pages/Dashboard';
-import Notifications from './pages/Notifications';
-import AIManagement from './pages/AIManagement';
+import InvoicePage from './pages/InvoicePage';
+import DisputePage from './pages/DisputePage';
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-100">
       <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/notifications" element={<Notifications />} />
-        <Route path="/ai-management" element={<AIManagement />} />
+        <Route path="/invoices" element={<InvoicePage />} />
+        <Route path="/disputes" element={<DisputePage />} />
       </Routes>
     </div>
   );
