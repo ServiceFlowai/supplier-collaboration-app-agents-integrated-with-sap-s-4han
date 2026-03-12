@@ -1,25 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Dashboard() {
+const Dashboard = () => {
   return (
-    <div className="p-6">
+    <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
-      <div className="grid grid-cols-3 gap-4">
-        <div className="bg-white p-4 shadow rounded">
-          <h2 className="text-lg font-semibold">Open Cases</h2>
-          <p className="text-3xl">42</p>
-        </div>
-        <div className="bg-white p-4 shadow rounded">
-          <h2 className="text-lg font-semibold">Pending Approvals</h2>
-          <p className="text-3xl">15</p>
-        </div>
-        <div className="bg-white p-4 shadow rounded">
-          <h2 className="text-lg font-semibold">Resolved Cases</h2>
-          <p className="text-3xl">128</p>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <Link to="/sales-orders" className="bg-white p-4 rounded shadow hover:shadow-lg">
+          <h2 className="text-xl font-semibold">Sales Orders</h2>
+          <p>View and manage your sales orders.</p>
+        </Link>
+        <Link to="/notification-preferences" className="bg-white p-4 rounded shadow hover:shadow-lg">
+          <h2 className="text-xl font-semibold">Notification Preferences</h2>
+          <p>Configure your notification settings.</p>
+        </Link>
       </div>
     </div>
   );
-}
+};
 
 export default Dashboard;
